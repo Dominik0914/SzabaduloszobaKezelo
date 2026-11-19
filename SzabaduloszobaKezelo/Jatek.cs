@@ -36,8 +36,14 @@ namespace SzabaduloszobaKezelo
             {
                 oss += (JatekosokSzama - 3) * 3000;
             }
-            oss += (HasznaltSegitseg - 1) * 1000;
-            return oss;
+            if (HasznaltSegitseg>0)
+            {
+                return oss+=(HasznaltSegitseg-1)*1000;
+            }
+            else
+            {
+                return oss;
+            }
         }
         public override string ToString()
         {
